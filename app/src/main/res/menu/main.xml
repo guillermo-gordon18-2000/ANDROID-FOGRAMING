@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <item
-        android:id="@+id/logout"
-        android:title="Cerrar Sesión"
-        app:showAsAction="ifRoom"
-        />
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".MainActivity">
+<item android:id="@+id/botonHome"
+    android:title="1"
+    android:orderInCategory="80"
+    android:icon="@drawable/home_icono"
+    app:showAsAction="ifRoom" />
+<item android:id="@+id/verPerfil"
+    android:title="3"
+    android:orderInCategory="90"
+    android:icon="@drawable/ic_ver"
+    android:iconTint="#F3950D"
+    app:showAsAction="ifRoom" />
+<item android:id="@+id/botonSalir"
+    android:title="5"
+    android:orderInCategory="100"
+    android:icon="@drawable/ic_cerrar_sesion"
+    app:showAsAction="ifRoom" />
 </menu>

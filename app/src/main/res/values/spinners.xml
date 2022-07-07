@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Facultad">
+        <item>Facultad</item>
+        <item>Facultad de Ciencias y Tecnología</item>
+        <item>Facultad de Ingeniería Civil</item>
+        <item>Facultad de Ingeniería Eléctrica</item>
+        <item>Facultad de Ingeniería Industrial</item>
+        <item>Facultad de Ingeniería Mecánica</item>
+        <item>Facultad de Ingeniería de Sistemas Computacionales</item>
+    </string-array>
+
+    <string-array name="FCyT">
+        <item>Carrera</item>
+        <item>Lic. Ing. Forestal</item>
+        <item>Lic. Ing. Alimentos</item>
+        <item>Lic. Bilingue</item>
+    </string-array>
+
+    <string-array name="FIC">
+        <item>Carrera</item>
+        <item>Lic. Ing. Civil</item>
+        <item>Lic. Topografía</item>
+        <item>Lic. Ing. Geomática</item>
+        <item>Lic. Ing. Geologica</item>
+    </string-array>
+
+    <string-array name="FIE">
+        <item>Carrera</item>
+        <item>Lic. Ing. Control y Auto.</item>
+        <item>Lic. Ing. Electrica</item>
+        <item>Lic. Ing. Electromecánica</item>
+        <item>Tec. Autotronica</item>
+        <item>Tec. Sis. Electricos</item>
+    </string-array>
+
+    <string-array name="FII">
+        <item>Carrera</item>
+        <item>Lic.Ing.Seguridad Industrial</item>
+        <item>Lic.Ing.Industrial</item>
+        <item>Lic.Recursos Humanos</item>
+    </string-array>
+
+    <string-array name="FIM">
+        <item>Carrera</item>
+        <item>Lic.Ingenieria Mecanica</item>
+        <item>Lic.Ing. Naval</item>
+        <item>Lic.Ing. Aeronautica</item>
+    </string-array>
+
+    <string-array name="FISC">
+        <item>Carrera</item>
+        <item>Lic. Ing. Software</item>
+        <item>Lic. Desarrollo de Software</item>
+        <item>Lic. Ciberseguridad</item>
+    </string-array>
+
+    <string-array name="Grupo1">
+        <item>Grupo</item>
+        <item>1LT131</item>
+        <item>1LT132</item>
+        <item>1LT133</item>
+    </string-array>
+
+    <string-array name="Grupo2">
+        <item>Grupo</item>
+        <item>1LC131</item>
+        <item>1LC132</item>
+        <item>1LC133</item>
+    </string-array>
+
+    <string-array name="Grupo3">
+        <item>Grupo</item>
+        <item>1LE131</item>
+        <item>1LE132</item>
+        <item>1LE133</item>
+    </string-array>
+
+    <string-array name="Grupo4">
+        <item>Grupo</item>
+        <item>1LI131</item>
+        <item>1LI132</item>
+        <item>1LI133</item>
+    </string-array>
+
+    <string-array name="Grupo5">
+        <item>Grupo</item>
+        <item>1LM131</item>
+        <item>1LM132</item>
+        <item>1LM133</item>
+    </string-array>
+
+    <string-array name="Grupo6">
+        <item>Grupo</item>
+        <item>1LS131</item>
+        <item>1LS132</item>
+        <item>1LS133</item>
+    </string-array>
+</resources>

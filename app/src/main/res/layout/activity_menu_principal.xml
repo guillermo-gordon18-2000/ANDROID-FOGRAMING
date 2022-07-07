@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    tools:context=".MenuPrincipalActivity">
+
+    <RelativeLayout
+        android:id="@+id/scPerfil"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="verPerfil"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/scLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="85dp">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="35dp"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scMascota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/scLogo">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:src="@drawable/rana_mascota" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scMascota"
+        android:layout_marginTop="45dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            android:gravity="center"
+            android:text="Elige una opción."
+            android:textColor="@color/white"
+            android:textSize="35dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scSubtitulo">
+
+        <ListView
+            android:id="@+id/lstOpciones"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>

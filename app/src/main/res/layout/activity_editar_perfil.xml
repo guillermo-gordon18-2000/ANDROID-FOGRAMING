@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarPerfilActivity"
+    android:background="@drawable/fondo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/scLogo"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="15dp"
+                android:gravity="left">
+
+                <ImageView
+                    android:id="@+id/imgLogo"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="85dp"
+                    android:src="@drawable/logo" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/scFoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgFoto"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:padding="15dp" />
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="155dp"
+                    android:layout_toRightOf="@+id/imgFoto"
+                    android:background="@color/white"
+                    android:onClick="OnClick"
+                    android:src="@drawable/ic_editar" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/scCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scFoto">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp">
+
+                    <LinearLayout
+                        android:id="@+id/scCVContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="25dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imgNom"
+                                android:layout_width="25dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/user" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_edit_text"
+                                app:boxStrokeColor="@color/white">
+
+                                <EditText
+                                    android:id="@+id/txtNombre"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/shape_edit_text"
+                                    android:hint="Nombre" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imgApe"
+                                android:layout_width="25dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/user" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_edit_text"
+                                app:boxStrokeColor="@color/white">
+
+                                <EditText
+                                    android:id="@+id/txtApellido"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/shape_edit_text"
+                                    android:hint="Apellido" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imgMail"
+                                android:layout_width="25dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/mail" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_edit_text"
+                                app:boxStrokeColor="@color/white">
+
+                                <EditText
+                                    android:id="@+id/txtCorreo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/shape_edit_text"
+                                    android:hint="Correo"
+                                    android:inputType="textEmailAddress" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imgPass"
+                                android:layout_width="25dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/lock" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_edit_text"
+                                app:passwordToggleEnabled="true">
+
+                                <EditText
+                                    android:id="@+id/txtContrasena"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/shape_edit_text"
+                                    android:hint="Contraseña Nueva"
+                                    android:inputType="textWebPassword" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imgPass2"
+                                android:layout_width="25dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/lock" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_edit_text"
+                                app:passwordToggleEnabled="true">
+
+                                <EditText
+                                    android:id="@+id/txtConfirmar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/shape_edit_text"
+                                    android:hint="Confirmar Contraseña"
+                                    android:inputType="textWebPassword" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnGuardar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:backgroundTint="#FFC848"
+                            android:gravity="center"
+                            android:onClick="ver"
+                            android:text="Guardar Cambios"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#F3950D"
+                android:gravity="center"
+                android:text="Eliminar Perfil"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

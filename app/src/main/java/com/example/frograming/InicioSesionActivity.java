@@ -61,16 +61,19 @@ public class InicioSesionActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onFailure(Call<LoginResponse> call, Throwable t) {
+
+                public void onFailure(Call<LoginResponse> call, Throwable t) { // llamado de la clase a la api
                     int x =1;
                 }
             });
 
-           /* if (correo.getText().toString().equals(user) && contrasena.getText().toString().equals(password)) {
+            if (correo.getText().toString().equals(user) && contrasena.getText().toString().equals(password)) {
                 Toast.makeText(this,"¡Login exitoso!", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(this,MenuPrincipalActivity.class));
             }
             else
-                Toast.makeText(this,"Datos ", Toast.LENGTH_LONG).show(); */
+
+                Toast.makeText(this,"Datos ", Toast.LENGTH_LONG).show();
 
         } catch (Exception e) {
             Toast.makeText(this,"Error de tipo: "+e, Toast.LENGTH_LONG).show();

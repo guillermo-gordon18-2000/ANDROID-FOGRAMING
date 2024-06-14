@@ -103,7 +103,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
                 startActivity(new Intent(this,MenuPrincipalActivity.class));
                 break;
             case R.id.verPerfil:
-                startActivity(new Intent(this,VerPerfilActivity.class));
+                startActivity(new Intent(this,EditarPerfilActivity.class));
+                //startActivity(new Intent(this,VerPerfilActivity.class));
                 break;
             case R.id.botonSalir:
                 startActivity(new Intent(this,InicioSesionActivity.class));

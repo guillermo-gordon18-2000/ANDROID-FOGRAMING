@@ -58,7 +58,9 @@ FROGRAMING es una aplicación desarrollada en Android Studio, diseñada para pro
 
 #### Imagen de la pantalla principal .
 
-![pagina principal Frogaming](https://github.com/guillermo-gordon18-2000/ANDROID-FOGRAMING/assets/83618044/15c68a24-0a76-4690-b7f6-959d1a6c99ec)## Autores 
+![pagina principal Frogaming](https://github.com/guillermo-gordon18-2000/ANDROID-FOGRAMING/assets/83618044/15c68a24-0a76-4690-b7f6-959d1a6c99ec)
+
+## Autores 
 
 #### Repositorio: Luis López
 

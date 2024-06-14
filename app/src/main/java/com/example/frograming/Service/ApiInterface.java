@@ -11,4 +11,7 @@ import retrofit2.http.POST;
 public interface ApiInterface {
     @POST("Login")
     Call<LoginResponse> Loguear (@Body LoginRequest request);
+    //@POST("Login")
+    //Call<LoginResponse> Loguear (@Body LoginRequest request);
+
 }

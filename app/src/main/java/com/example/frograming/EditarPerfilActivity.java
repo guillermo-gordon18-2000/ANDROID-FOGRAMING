@@ -1,6 +1,7 @@
 package com.example.frograming;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -24,6 +25,7 @@ import java.security.NoSuchAlgorithmException;
 public class EditarPerfilActivity extends AppCompatActivity {
     //No se ha trabado en las otras clases como Entidades y Helpers
 
+
     private String contrasena;
     private boolean validacion;
     ImageView imgFoto;
@@ -34,9 +36,28 @@ public class EditarPerfilActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_perfil);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //imagen =(LayerDrawable)findDrawableByLayerId(R.id.fot_1);
+
         imgFoto = findViewById(R.id.imgFoto);
         InicializarControles();
+
+
+
+/*
+SharedPreferences preferencias = getSharedPreferences("usuario",MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferencias.edit();
+        editor.putString("user","8-959-2011");                                             //<-    User ID-->
+        editor.putString("nombre","Adrian");                                               //<-    User ID-->
+        editor.putString("apellido","Albaez");                                             //<-    User ID-->
+        editor.putString("correo","a.albaez05gmail.com");                                  //<-    User ID-->
+        editor.putString("faculdad","Facultad de Ingeniería de Sistemas Computacionales"); //<-    User ID-->
+        editor.putString("carrera","");                                                    //<-    User ID-->
+        editor.putString("grupo","1SL-131");                                               //<-    User ID-->
+        editor.putString("contra","12345678");                                             //<-    User ID-->
+       editor.putString("contra1","12345678");
+        editor.commit();
+
+
+*/
     }
 
     private void InicializarControles() {
@@ -103,13 +124,33 @@ public class EditarPerfilActivity extends AppCompatActivity {
         return validacion;
     }
 
+
+    private boolean isEmpty(EditText etText) {if (etText.getText().toString().trim().length() > 0) return false; return true; }
+
     public void ver(View v){
 
         try {
             validacion=validarContrasena(contrasena1.getText().toString(), contrasena2.getText().toString());
             String contra;
             contra=md5(contrasena1.getText().toString());
-            if (validacion == true) { /*  //Guardar datos aun se sigue trabjando
+
+         //   private EditText nombre, apellido, cedula, correo, contrasena1, contrasena2;
+                   if (isEmpty(nombre) )  {
+
+                                         Toast.makeText(this, "[ADVERTENCIA]  Campo  nombre vacio", Toast.LENGTH_LONG).show();
+                                           }
+                   if (isEmpty(apellido) ) {
+
+                                          Toast.makeText(this, "[ADVERTENCIA]  Campo  apellido vacio", Toast.LENGTH_LONG).show();
+                                          }
+                   if (isEmpty(correo) ) {
+
+                                          Toast.makeText(this, "[ADVERTENCIA]  Campo  correo vacio", Toast.LENGTH_LONG).show();
+                                         }
+                   if ((isEmpty(contrasena1)!=true) || (isEmpty(contrasena2)!=true)) {
+
+                       if (validacion == true) { /*  //Guardar datos aun se sigue trabjando
+
                 Usuarios usuario = new Usuarios(
                  nombre.getText().toString(),
                  apellido.getText().toString(),
@@ -126,17 +167,14 @@ public class EditarPerfilActivity extends AppCompatActivity {
                 Toast.makeText(this, "Error, su cuenta no ha podido ser registrada", Toast.LENGTH_LONG).show();
                 }
                */
-            }
-            else
-                Toast.makeText(this, "[Error]  Contaseña incorrecta", Toast.LENGTH_LONG).show();
+                           Toast.makeText(this, "[Error]  Contaseña Correcta", Toast.LENGTH_LONG).show();
+                       } else
+                           Toast.makeText(this, "[Error]  Contaseña incorrecta", Toast.LENGTH_LONG).show();
+
+                   }
         }catch(Exception e){
             Toast.makeText(this, "Error :" + e.getMessage(), Toast.LENGTH_LONG).show();
         }
-    }
-
-    public void EliminarPerfil(View v){//Proximamente
-
-        Toast.makeText(this, " COMMING SON", Toast.LENGTH_LONG).show();
     }
 
     // Metodos Para ecoger Imagenes desde galerias y recortarlas en circulos
@@ -163,5 +201,14 @@ public class EditarPerfilActivity extends AppCompatActivity {
         }
         // Glide.with(getBaseContext()).load(data.getData()).apply(RequestOptions.circleCropTransform()).into(imgFoto);
     }    // Selecciona la imagen y la infla
+
+
+
+
+    public void EliminarPerfil(View v){//Proximamente
+
+        Toast.makeText(this, " COMMING SON", Toast.LENGTH_LONG).show();
+    }
+
 }
 
